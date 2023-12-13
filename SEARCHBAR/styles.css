@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+  }
+  
+  //body {
+    background: #29313a;
+  }
+  
+  .wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .search-box {
+    width: 450px;
+    height: 100px;
+    position: relative;
+  }
+
+  i {
+    position: absolute;
+    top: 18px;
+    right: 15px;
+  }
+  
+  .input {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+    box-sizing: border-box;
+    width: 0px;
+    height: 50px;
+    padding: 0 20px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 50px;
+    color: #29313a;
+    border: 3px solid #AD7BB6;
+    transition: all 0.8s ease;
+  }
+  
+  ::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: #AD7BB6;
+  }
+  ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #AD7BB6;
+  }
+  :-ms-input-placeholder {
+    /* IE 10+ */
+    color: #AD7BB6;
+  }
+  :-moz-placeholder {
+    /* Firefox 18- */
+    color: #AD7BB6;
+  }
+  
+  .btn {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #AD7BB6;
+    border-radius: 50%;
+    right: 45px;
+    top: 20px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 80px;
+    font-size: 20px;
+    color: #fff;
+    transition: all 0.8s ease;
+  }
+  
+  .input.active {
+    width: 350px;
+    height: 50px;
+    right: 100px;
+  }
+  
+  .btn.animate {
+    transform: rotate(-360deg);
+    right: 100px;
+  }
+ 
+ 
