@@ -378,9 +378,8 @@ text-overflow: ellipsis;
     border-radius: 15px;
     border: 1rem solid 630873; 
     outline: groove 1.75em #AD7BB6;
-    position: absolute;
-    top: 2rem;
-    left: 5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
   
   .carousel-inner {
