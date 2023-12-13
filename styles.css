@@ -1,0 +1,472 @@
+:root {
+    --dark-purple: #630873;
+    --lilac: #AD7BB6;
+}
+
+* {
+    font-family: "dita", Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: block;
+}
+
+/*START header ribbon***/
+.ribbon-container {
+    //border: 2px solid pink;
+    display:flex;
+    position: relative;
+    height: 160px;
+    max-height: 100%;
+    //width: 100vw;
+}
+
+.ribbon-contents {
+    //border: 2px solid orange;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: #630873;
+    border-bottom: 1em solid #AD7BB6;
+}
+.ribbon-contents > img {
+    b//order: 2px solid pink;;
+    width: 15em;
+    height: 15em;
+    min-height: 0;
+    position: relative;
+    left: -3em;
+    top: -4em;
+    margin-left: 1em;
+    flex-shrink: 2;
+}
+
+.ribbon-links  {
+    //border: 2px solid blue;
+    display: flex;
+    justify-content: space-around;
+    justify-self: center;
+    margin-left: 1em;
+    width: 35em;
+    align-items: flex-end;
+    flex-grow: 2;
+    flex-shrink: 1;
+
+    
+}
+
+.ribbon-links > a {
+    text-decoration: none;
+    color:white;
+    font-size: 2em;
+    font-weight: bold;
+    padding: .3em .5em 0;
+
+}
+
+.selected-nav-link {
+    background-color: #AD7BB6;
+    padding: .3em;
+}
+
+.socials {
+    width: 5em;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1em;
+    font-size: 1.5em;
+    margin-left: 3em;
+    flex-shrink: 2;
+    margin-top: .5em;;
+}
+/*END header ribbon***/
+
+section {
+    display: flex;
+    //position: relative;
+    justify-content: flex-start;
+    margin-top: 2em;
+}
+
+.left-side, .center-right {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.center-right {
+    margin-left: 4em;
+    margin-right: 1em;
+    position: relative;
+}
+
+.left-side {
+    width: 25vw;
+    max-width: 100%;
+    margin-right: 2em;
+    padding: 0 1em 1em 1em; 
+    align-items: center;
+    margin-left: 1em;
+}
+
+.jump-top-btn {
+    position: absolute;
+    right: 5px;
+}
+/*START up next box***/
+.coming-up {
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #AD7BB6;
+    padding: 1.5rem;
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    align-items: center;
+}
+
+hr {
+    border-style:dotted;
+    height: .25em;
+    width: 10em;
+    margin: 0;
+}   
+
+.coming-up > h1 {
+    font-size: 3em;
+    margin: 0
+
+}
+
+.coming-up > h3 {
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+.coming-up > p {
+    font-size: 1.5em;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italics {
+    font-style: italic;
+    font-size: .5em;
+}
+/*end up next box***/
+
+/*START calendar***/
+#wrapper{
+    padding: 40px;
+    display: grid; 
+    grid-gap: 40px; 
+    grid-template-columns: 1fr 1fr 1fr;
+    align-self: center;
+}
+
+[id^=calendar],
+[id^=calendar] + h3{
+    width: 400px;
+}
+
+[id^=calendar] + h3{
+    text-align: center;
+}
+
+@media only screen and (max-width: 500px){
+    #wrapper{
+        padding: 1em;
+        display: block;
+    }
+    [id^=calendar],
+    [id^=calendar] + h3{
+        width: 100%;
+        max-width: none;
+        margin: 1em auto;
+    }
+
+    [id^=calendar] + h3{
+        display: block;
+        margin-bottom: 2em;
+    }
+}
+
+.mini-cal{
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+font-family: "dita", sans-serif;
+padding-bottom: 1.2em;
+background-image: linear-gradient(to bottom right, #630873, #005249);
+color: #fff;
+border-radius: 25px;
+align-self: center;
+margin-left: 4em;
+}
+
+#calTitle{
+display: flex;
+justify-content: space-between;
+-ms-align-items: center;
+align-items: center;
+font-size: 1.12em;
+text-align: center;
+padding: 0.4em 1em;
+padding-top: 0.8em;
+}
+
+#calTitle button{
+outline: none;
+display: block;
+border: 0.1em solid #ddd;
+border: none;
+padding: 0;
+width: 40px;
+height: 40px;
+line-height: 60px;
+border-radius: 50%;
+background-color: #AEC6CF;
+}
+
+#calTitle button svg{
+width: 30px;
+height: 30px;
+}
+
+#calTitle button:hover{
+background: green; 
+}
+
+#calThead, #calTbody{
+display: flex;
+flex-wrap: wrap;
+padding: 0.1em;
+}
+
+#calThead{
+color: #fff;
+margin-top: 0.4em;
+align-items: center;
+text-align: center;
+font-size: 0.88em;
+}
+
+#calThead > div, #calTbody .a-date{
+box-sizing: border-box;
+flex: 1;
+min-width: calc(100% / 7);
+max-width: calc(100% / 7);
+width: calc(100% / 7);
+text-align: center;
+padding: 0;
+}
+
+#calThead > div{
+font-size: 1.1em;
+padding: 0.2em 0.2em;
+}
+
+#calTbody{
+color: #ddd;
+}
+
+#calTbody .a-date > span{
+display: block;
+font-size: 1em;
+}
+
+#calTbody .a-date{
+cursor: default;
+padding: 0;
+position: relative;
+background-color: transparent;
+color: inherit;
+//padding: 1em;
+border: 0.1em solid transparent;
+outline: none;
+font-size: 0.9em;
+}
+
+#calTbody .a-date.blurred{
+opacity: 0.5;
+pointer-events: none;
+}
+
+#calTbody .a-date.event:before{
+content: '';
+position: absolute;
+top: 0.2em;
+right: 0;
+left: 0;
+margin: auto;
+background-color: #AEC6CF;
+width: 0.3em;
+height: 0.3em;
+border-radius: 50%;
+}
+
+#calTbody .a-date.current{
+border-color: #AEC6CF;
+outline: none;
+outline: 0;
+}
+
+#calTbody .a-date.focused,
+#calTbody .a-date:active{
+background: #AD7BB6;
+}
+
+#calTbody .a-date.current.event.focused{
+background-color: #AEC6CF;
+color: #000;
+}
+
+#calTFooter{
+display: flex;
+justify-content: space-between;
+-ms-align-items: center;
+align-items: center;
+font-size: 1.1em;
+padding: 0 1em;
+margin-top: 0.5em;
+}
+
+#calTFooter #calLink{
+font-size: 0.8em;
+display: inline-block;
+padding: 0.6em 0.8em;
+flex-shrink: 0;
+text-decoration: none;
+color: #AEC6CF;
+}
+
+#calTFooter #calLink:hover{
+background-color: #555;
+}
+
+#calTFooter #eventTitle{
+margin: 0;
+margin-right: 0.1em;
+font-weight: normal;
+font-size: 0.95em;
+white-space: nowrap;
+overflow: hidden;
+-ms-text-overflow: ellipsis;
+text-overflow: ellipsis;
+}
+
+//START CAROUSEL
+#carouselExample {
+    //width: 50vw;
+    //height: auto;
+    position: absolute;
+
+}
+.custom-carousel-container {
+    width: 50vw;
+    height: 50vh;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px;
+    border: 1rem solid 630873; 
+    outline: groove 1.75em #AD7BB6;
+    position: absolute;
+    top: 2rem;
+    left: 5rem;
+  }
+  
+  .carousel-inner {
+    height: 100%;
+  }
+  
+  .carousel-item {
+    text-align: center;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: fit-content;
+    flex-basis: 15em;
+    flex-shink: 1;
+    text-align: left;
+    color: #fff;
+    z-index: 1;
+  }
+  
+  .carousel-caption p {
+    font-size: 2vw; /* Adjust font size with vw unit */
+    padding: 2vw; /* Adjust padding with vw unit */
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+  }
+  
+  
+  /* Show carousel indicators */
+  .carousel-indicators {
+    bottom: -1.5em;
+    z-index: 1;
+  }
+  
+  /* Hide default indicators */
+  .carousel-indicators li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #fff;
+    border-radius: 50%;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #000;
+  }
+  
+  /* Adjust styles for smaller screens using media query */
+  
+  /* Adjust styles for smaller screens using media query */
+  @media (max-width: 768px) {
+    .custom-carousel-container {
+      height: auto; 
+      font-family: 'Montserrat Alternates', sans-serif;
+      text-align: center;
+    }
+  
+    .carousel-caption {
+      top: 0%;
+      left: 0%;
+      text-align: center;
+      background-color: rgba(0, 0, 0, 0.5);
+        font-family: 'Montserrat Alternates', sans-serif;
+      text-align: center;
+      
+    }
+  
+    .carousel-caption p {
+      position: static; /* Reset position for paragraph */
+      //padding: 10px; /* Adjust padding as needed */
+      font-size: 18px; /* Adjust font size for smaller screens */
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 0;
+      font-family: 'Montserrat Alternates', sans-serif;
+      text-align: center;
+    }
+  
+    .carousel-caption::before {
+      display: none; /* Hide the double background */
+    }
+  }
+//END CAROUSEL
