@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Style Swap Society</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="BOOTSTRAP JQUERY CAROUSEL.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rnj7hlr.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zvl5ltm.css">
+    <script src="https://kit.fontawesome.com/8f1f53b08b.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!--top ribbon bar-->
+    <header>
+        <div id="jump-top" class="ribbon-container">
+            <div class="ribbon-contents">
+                <div class="ribbon-img"></div>
+                    <img src="LOGO (1).png"" height="300" width="400"> 
+                    <nav class="ribbon-links">
+                    <a href="index.html">Events</a>
+                    <a href="guidelines.html">Guidelines</a>
+                    <a href="#" class="selected-nav-link no-hover">About</a>
+                </nav>
+                <div class="right-align-ribbon">
+                    <div class="socials">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <!--searchbar start-->
+                    <div class="search">  
+                        <div class="search-box">
+                          <button class="btn-search"><i class="fas  fa-search"></i></button>
+                          <input type="text" class="input-search"     placeholder="Type to Search...">
+                        </div>
+                      </div>
+                      <!--searchbar end-->
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="left-side">
+            <div class="coming-up">
+                <h1>UP NEXT:</h1>
+                <hr>
+                <h3>MONTHLY MELANGE</h3>
+                <p><span class="bold">When: </span>Friday, Dec. 20th</p>
+                <p><span class="bold">Where: </span>Society Atelier</p>
+                <p class="italics">Please review the swap guidelines in advance.</p>
+            </div>
+            <div>
+                <div id="wrapper">
+		            <div>
+			            <div id="calendar">
+                        </div>
+		            </div>
+	            </div>
+            </div>
+            <div class="left-abt-img">
+                <img src="Images/about-img1.png" alt="three women smiling" height="300" width="300">
+            </div>
+        </div>
+        <div class="center-right"> 
+            <div class="abt-body">
+                <div class="abt-txt" style="width: 75vw;">
+                    <h1 style="font-size: 4em; font-weight: 700; color: #AD7BB6; font-style: italic;">Who We Are</h1>
+                    <div class="abt-parags" style="display: flex; flex-direction: column;">
+                        <p style="font-size: 1.5em; font-weight: 300; color: #630873; margin-top: 3em; text-align: justify;">The Style Swap Society seeks to blend and build sustainability through community.</p>
+                        <p style="font-size: 1.5em; font-weight: 300; color: #630873;">We live in a very consumerist society, and it is only natural to want to be stylish and embrace trends that flatter us or enhance our aesthetic appeal. It’s not unhealthy to want a fresh wardrobe on occasion, each year or even each season.</p>
+                        <p style="font-size: 1.5em; font-weight: 300; color: #630873;">But it is impossible to deny that “fast fashion”, a modern business model of replicating high fashion designs mass produced at low cost and rushed to retail, is destructive to our increasingly fragile climate.</p>
+                        <p style="font-size: 1.5em; font-weight: 300; color: #630873;">The solution? Clothing swaps! These fun, fashion-forward events allow for us to clear our closets of items we’ve lost interest in or which no longer fit properly without adding to landfills. Our apparel get an expanded lifespan while we get a to explore new or different styles - and all at no cost! It’s truly a win-win.</p>
+                        <p style="font-size: 1.5em; font-weight: 300; color: #630873;">Style Swap Society is your central hub for all things clothing swap in the Charlottesville region. Come here to find out the who, what, when, where and why swaps are being organized in the area. When we come together as community, the sky is the limit!</p>
+                    </div>
+                </div>
+                <div class="abt-img" style="flex-direction: column;">
+                    <img src="Images/about-img2.png" alt="staff" height="300" width="300">
+                    <img src="Images/about-img3.png" alt="more staff" height="300" width="300">
+                    <img src="Images/about-img4.png" alt="yet more staff" height="300" width="300">
+                    <img src="Images/about-img5.png" alt="and yet more staff" height="300" width="300">
+                </div>
+            </div>
+            <!--content here-->
+
+        </div>
+    </section>
+    <div class="jump-top-btn">
+        <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+    </div>
+    <!--END jump to top button-->
+    <footer>
+        <p>team@styleswapsociety.xyz</p>
+        <h3>Copyright © Style Swap Society 2023</h3>
+        <p>434.123.4567</p>
+    </footer>
+
+    
+    <script>
+        //Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="Calendar/mini_calendar.js"></script>
+
+	<script>
+		var sameDaylastWeek = new Date().setDate(new Date().getDate() - 5);
+		var someDaynextMonth = new Date().setDate(new Date().getDate() + 8);
+
+		// All dates should be provided in timestamps
+	    	var sampleEvents = [
+			{
+			    title: "Dress to Impress",
+			    date: sameDaylastWeek, // Same day as today, last week
+			    link: "https://www.eventbrite.com/e/soulful-sundays-bay-area-edition-tickets-55214242285?aff=ehomecard"
+			},
+			{
+			    title: "Let It Snow!",
+			    date: new Date().getTime(), // Today
+			    link: "https://www.eventbrite.co.uk/e/london-film-comic-con-summer-2019-tickets-49472593860?aff=ebdssbdestsearch"
+			},
+			{
+			    title: "Haute Holidays",
+			    date: someDaynextMonth, // Some day as today, next month
+			    link: "https://www.eventbrite.com/e/leaner-stronger-faster-tm-youth-athletic-camp-2021-tickets-38245970728?aff=ebdssbdestsearch"
+			}
+	    	];
+
+		$(document).ready(function(){
+			$("#calendar").MEC({
+				events: sampleEvents
+			});
+
+			// Make calendar start on monday
+			$("#calendar2").MEC({
+				from_monday: true,
+				events: sampleEvents
+			});
+		});
+	</script>
+    </body>
+    </html>
