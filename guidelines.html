@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Style Swap Society</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="BOOTSTRAP JQUERY CAROUSEL.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rnj7hlr.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zvl5ltm.css">
+    <script src="https://kit.fontawesome.com/8f1f53b08b.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <!--top ribbon bar-->
+    <header>
+        <div id="jump-top" class="ribbon-container">
+            <div class="ribbon-contents">
+                <div class="ribbon-img"></div>
+                    <img src="LOGO (1).png"" height="300" width="400"> 
+                    <nav class="ribbon-links">
+                        <a href="index.html">Events</a>
+                        <a href="#" class="selected-nav-link no-hover">Guidelines</a>
+                        <a href="about.html" >About</a>
+                    </nav>
+                <div class="right-align-ribbon">
+                    <div class="socials">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-tiktok"></i>
+                    </div>
+                    <!--searchbar start-->
+                    <div class="search">  
+                        <div class="search-box">
+                          <button class="btn-search"><i class="fas  fa-search"></i></button>
+                          <input type="text" class="input-search"     placeholder="Type to Search...">
+                        </div>
+                      </div>
+                      <!--searchbar end-->
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="left-side">
+            <div class="coming-up">
+                <h1>UP NEXT:</h1>
+                <hr>
+                <h3>MONTHLY MELANGE</h3>
+                <p><span class="bold">When: </span>Friday, Dec. 20th</p>
+                <p><span class="bold">Where: </span>Society Atelier</p>
+                <p class="italics">Please review the swap guidelines in advance.</p>
+            </div>
+            <div>
+                <div id="wrapper">
+		<div>
+			<div id="calendar"></div>
+		</div>
+	</div>
+            </div>
+        </div>
+        <div class="center-right"> 
+            <div class="gl-intro">
+                <div class="gl-intro-txt">
+                    <h1>So, how does this work?</h1>
+                    <p>When you arrive, you’ll receive a ticket with a group number - this is your first-round group. Hold on to this - you’ll need to present it to enter your first round.</p>
+                    <p>You will also receive one token for each clothing item you bring - these can be spent as “cash” - one token for one item.</p>
+                </div>
+                <div class="gl-intro-img">
+                    <img src="Images/Firefly person shrugging 13875.jpg" alt="illustration of shrugging woman" height="300" width="300">
+                </div>
+            </div>
+            <div class="gl-table">
+                <div class="gl-do">
+                    <h1>Do...</h1>
+                    <br>
+                    <span><i class="fa-solid fa-thumbs-up"></i></span>
+                    <p>Bring between 5 and 10 items.</p>
+                    <span><i class="fa-solid fa-thumbs-up"></i></span>
+                    <p>Wash anything that was worn.</p>
+                    <span><i class="fa-solid fa-thumbs-up"></i></span>
+                    <p>Choose lightly used items - would you give this item to your best friend?</p>
+                </div>
+                <div class="divider"></div>
+                <div class="gl-dont">
+                    <h1 style="font-family: 'good-karma-smooth-regular', sans-serif;">Don't...</h1>
+                    <br>
+                    <span><i class="fa-solid fa-thumbs-down"></i></span>
+                    <p>Bring more than you intend to take.</p>
+                    <span><i class="fa-solid fa-thumbs-down"></i></span>
+                    <p>Bring stained, damaged or smelly items.</p>
+                    <span><i class="fa-solid fa-thumbs-down"></i></span>
+                    <p>Bring non-apparel items (i.e homeware, bedding, etc.).</p>
+                </div>
+            </div>
+            </div>
+    </section>
+    <div class="jump-top-btn">
+        <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+    </div>
+    <!--END jump to top button-->
+    <footer>
+        <p>team@styleswapsociety.xyz</p>
+        <h3>Copyright © Style Swap Society 2023</h3>
+        <p>434.123.4567</p>
+    </footer>
+
+    
+    <script>
+        //Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="Calendar/mini_calendar.js"></script>
+
+	<script>
+		var sameDaylastWeek = new Date().setDate(new Date().getDate() - 5);
+		var someDaynextMonth = new Date().setDate(new Date().getDate() + 8);
+
+		// All dates should be provided in timestamps
+	    	var sampleEvents = [
+			{
+			    title: "Dress to Impress",
+			    date: sameDaylastWeek, // Same day as today, last week
+			    link: "https://www.eventbrite.com/e/soulful-sundays-bay-area-edition-tickets-55214242285?aff=ehomecard"
+			},
+			{
+			    title: "Let It Snow!",
+			    date: new Date().getTime(), // Today
+			    link: "https://www.eventbrite.co.uk/e/london-film-comic-con-summer-2019-tickets-49472593860?aff=ebdssbdestsearch"
+			},
+			{
+			    title: "Haute Holidays",
+			    date: someDaynextMonth, // Some day as today, next month
+			    link: "https://www.eventbrite.com/e/leaner-stronger-faster-tm-youth-athletic-camp-2021-tickets-38245970728?aff=ebdssbdestsearch"
+			}
+	    	];
+
+		$(document).ready(function(){
+			$("#calendar").MEC({
+				events: sampleEvents
+			});
+
+			// Make calendar start on monday
+			$("#calendar2").MEC({
+				from_monday: true,
+				events: sampleEvents
+			});
+		});
+	</script>
+    </body>
+    </html>
